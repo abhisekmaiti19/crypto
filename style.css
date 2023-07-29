@@ -1,0 +1,300 @@
+*{
+    width: 0;
+    margin: 0;
+    font-family: poppins;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: black;
+}
+
+.navbar{
+    padding: 10px 10px 0px 10px;
+    height: 20%;
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    width: 100%;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.22);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(9px);
+-webkit-backdrop-filter: blur(9px);
+/* border: 1px solid rgba(255, 255, 255, 0.3); */
+display: flex;
+flex-direction: column;
+}
+.up,.dwn{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+
+.otherNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    font-size: 12px;
+    align-items: center;
+    color: aliceblue;
+}
+
+.otherNav button{
+    width: 120px;
+    height: 50px;
+    font-size: 110%;
+    border-radius: 10px;
+    background-color: #009dff;
+    color: aliceblue;
+    border: none;
+}
+
+.otherNav h2{
+    width:10%
+}
+
+
+
+/* .otherNav button{
+    width:10%
+} */
+.navLogo{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.navLogo h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: azure;
+}
+
+#gridView, #listView{
+    display: flex;
+    width: 50%;
+    padding-left: 20px;
+    color: white;
+    
+    
+    justify-content: flex-start;
+}
+
+
+
+#gridView h1, #listView h1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+#gridView :hover, #listView :hover{
+    opacity: 40%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Toggle CSS */
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 25px;
+	background: rgb(255, 255, 255);
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 1.25px;
+	left: 1.25px;
+	width: 22.5px;
+	height: 22.5px;
+	background: #009dff;
+	border-radius: 22.5px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #000000;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 32.5px;
+}
+
+  
+ 
+
+
+
+
+.main{
+    display: flex;
+    top: 20%;
+    flex-wrap: wrap;
+    position: relative;
+    width: 80%;
+    justify-content: space-between;
+    /* background-color: white; */
+    height: 90%;
+    /* border: 2px soldi white; */
+    padding: 2% 10% 0 10%;
+}
+.card{
+    padding: 10px;
+    width: 220px;
+    margin:10px;
+    height: 220px;
+    gap:10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(111, 104, 104, 0.39);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(111, 104, 104, 0.3);
+    color: white;
+}
+
+.card .logoCard{
+    /* border: 2px black solid; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    /* background-color: aliceblue; */
+}
+#logoCardImage{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logoCardImage img{
+    width: 40px;
+}
+#logoCardDetails h3{
+    width: 170px;
+
+}
+#logoCardDetails h3{
+    font-size: 15px;
+
+
+}
+#logoCardDetails h4{
+    font-size: 10px;
+    font-weight: 100;
+
+}
+#parcent{
+    height: 10%;
+    width: 30%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    border: green solid 1px;
+}
+
+#price{
+    height: 60%;
+    width: 100%;
+    /* border: solid ; */
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    justify-content: space-between;
+    font-size: 8px;
+    color: rgb(100, 100, 100);
+}
+
+#price h2{
+    width: 100%;
+}
+
+#acPrice{
+    color: green;
+    font-size: 20px;
+}
+
+
+
+/* //listView  */
+/* #main{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#card{
+    width: 100%;
+    height:70px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#price, #parcent,#logoCard{
+    width: 33.3%;
+}
+
+#price{
+    flex-direction: row;
+    align-items: center;
+}
+#parcent{
+    width: 10%; */
+/* } */
